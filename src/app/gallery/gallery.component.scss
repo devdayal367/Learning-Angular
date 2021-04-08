@@ -1,0 +1,131 @@
+body, body *{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*all slides*/
+ .slide{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 0.3s;
+display: none;
+}
+
+/*all buttons*/
+.button{
+    background-color: rgba(0,0,0,0.6);
+    color: #FFF;
+    position: absolute;
+    top: calc(50% - 25px);
+    height: 70px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    font-size: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/*all button arrows*/
+.button span{
+    border: 10px solid transparent;
+}
+
+/*button hover*/
+.button:hover{
+    background-color: rgba(0,0,0,1);
+}
+
+/*back button*/
+.back{
+    left: 0px;
+    border-radius: 0 10px 10px 0;
+}
+
+/*back button arrrow*/
+.back span{
+    border-right-color: #FFF;
+}
+
+/*next button*/
+.next{
+    right: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+/*next button arrow*/
+.next span{
+    border-left-color: #FFF;
+}
+
+/*all radio set*/
+.slideradio{
+    display: none;
+}
+
+/*show slide that is adjacent to checked radio control*/
+.slideradio:checked + .slide{
+    display: block;
+}
+
+/* thumbnail drawer */
+.thumbwrapper{
+    display: flex;
+    height: 20%;
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    left: 10px;
+}
+
+/* each thumbnail */
+.thumb{
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0px 5px;
+    flex: 20 20 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* thumb hover effect */
+.thumb:hover{
+    opacity: 0.9;
+}
+
+/* display style for selected slide */
+/* this could be done better with sass for unknown number of slides, but could also be left out as non-essential */
+/* just keeping everything straight css for understandable demo */
+#slide0:checked ~ .thumbwrapper .slide0{
+opacity: 1;
+box-shadow: 0 0 30px rgba(0,0,0,1);
+transform: scale(1.05);
+}
+#slide1:checked ~ .thumbwrapper .slide1{
+opacity: 1;
+box-shadow: 0 0 30px rgba(0,0,0,1);
+transform: scale(1.05);
+}
+#slide2:checked ~ .thumbwrapper .slide2{
+opacity: 1;
+box-shadow: 0 0 30px rgba(0,0,0,1);
+transform: scale(1.05);
+}
+#slide3:checked ~ .thumbwrapper .slide3{
+opacity: 1;
+box-shadow: 0 0 30px rgba(0,0,0,1);
+transform: scale(1.05);
+}
+#slide4:checked ~ .thumbwrapper .slide4{
+opacity: 1;
+box-shadow: 0 0 30px rgba(0,0,0,1);
+transform: scale(1.05);
+}
