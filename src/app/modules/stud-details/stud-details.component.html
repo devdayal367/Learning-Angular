@@ -1,0 +1,23 @@
+<p>stud-details works!</p>
+<table b order="1">
+    <thead>
+    <tr>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Mark 1</th>
+        <th>Mark 2</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentService.studentList">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.mark1}}</td>
+            <td>{{student.mark2}}</td>
+            <td><button (click)="studentService.calculateTotal(student)">Total</button></td>
+        </tr>
+
+    </tbody>
+
+</table>
