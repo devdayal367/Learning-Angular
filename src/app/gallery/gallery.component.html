@@ -1,4 +1,4 @@
-<input type="radio" name="slides" id="slide0" class="slideradio" checked/>
+<!-- <input type="radio" name="slides" id="slide0" class="slideradio" checked/>
 <div class="slide" style="background-image: url(https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
   <label class="button back" for="slide4">
     <span></span>
@@ -54,4 +54,11 @@
   <label for="slide2" class="thumb slide2" style="background-image: url(https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);"></label>
   <label for="slide3" class="thumb slide3" style="background-image: url(https://images.pexels.com/photos/3776859/pexels-photo-3776859.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);"></label>
   <label for="slide4" class="thumb slide4" style="background-image: url(https://images.pexels.com/photos/4063793/pexels-photo-4063793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);"></label>
-</div>
+</div> -->
+
+
+
+<p>stud-list works!</p>
+<ol>
+    <li *ngFor="let student of studentService.studentList" (click)="studentService.calculateTotal(student)">{{student.name}}</li>
+</ol>

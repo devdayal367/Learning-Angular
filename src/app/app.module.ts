@@ -9,7 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ModulesModule } from './modules/modules.module';
-
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +18,15 @@ import { ModulesModule } from './modules/modules.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    GalleryComponent
+    GalleryComponent,
+    HttpComponent,
+
   ],
   imports: [
     BrowserModule,
     ModulesModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

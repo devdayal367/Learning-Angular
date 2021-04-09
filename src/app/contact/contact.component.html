@@ -1,12 +1,12 @@
-<div class="container d-flex justify-content-center align-items-center">
-	
+<!-- <div class="container d-flex justify-content-center align-items-center">
+	 -->
 	<!-- // SVG
 					from: https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm 
   -------------------------------------------------------------
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
 
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
+	<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
 			<g id="Image">
 					<g id="g14">
 							<g id="g16">
@@ -307,34 +307,63 @@
   -------------------------------------------------------------
   ------------------------------------------------------------>
 	
-	<form>
+	<!-- <form> 
 		<h1 class="title text-center mb-4">Talk to Us</h1>
 
 			<!-- Name -->
-			<div class="form-group position-relative">
+			<!-- <div class="form-group position-relative">
 				<label for="formName" class="d-block">
 					<i class="icon" data-feather="user"></i>
-				</label>
-				<input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
-			</div>
+				</label> -->
+				<!-- <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+			</div> --> -->
 
 			<!-- E-mail -->
-			<div class="form-group position-relative">
+			<!-- <div class="form-group position-relative">
 				<label for="formEmail" class="d-block">
 					<i class="icon" data-feather="mail"></i>
 				</label>
 				<input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
-			</div>
+			</div> -->
 
 			<!-- Message -->
-			<div class="form-group message">
+			<!-- <div class="form-group message">
 				<textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Mensagem"></textarea>
-			</div>
+			</div> -->
 		
 			<!-- Submit btn -->
-			<div class="text-center">
+			<!-- <div class="text-center">
 				<button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
 			</div>
 	</form>
 	
-</div>
+</div> -->
+
+
+
+
+
+<h1>studentdetailscomponents</h1>
+<p>stud-details works!</p>
+<table b order="1">
+    <thead>
+    <tr>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Mark 1</th>
+        <th>Mark 2</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentService.studentList">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.mark1}}</td>
+            <td>{{student.mark2}}</td>
+            <td><button (click)="studentService.calculateTotal(student)">Total</button></td>
+        </tr>
+
+    </tbody>
+
+</table>
